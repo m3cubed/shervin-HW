@@ -28,6 +28,8 @@ let startFall; //Here, we're declaring a variable but we didn't put any properti
 //Calculate the ball vertical speed
 function calculateBallYSpeed() {
 	ballFallSpeed = ballFallSpeed + gravity * (1 / 60); //This is basically the v = v0 + at equation. Time is 1/60 because it's 60 fps. Since we're calling this function every 1/60 of a second, we should multiply it by such amount.
+	//The above equation is essentially Vf = V0 + a*t where t is the time it takes between each frame.
+
 	if (ballFallSpeed > 40) {
 		clearInterval(startFall); //This clears the calculation because it will keep going forever and that is a lot of computing power to waste. 20 is just an arbitary number.
 	}
@@ -95,6 +97,7 @@ function calcBallY() {
 	//Y movement. Only works when the ball is off the rectangle.
 	if (onRect === false) {
 		ballY += ballFallSpeed / 2;
+		//This equation is essentially d = (Vf + V0)/2. This might not be physics class friendly but it's the fastest in terms of computation because of the easy calculations. Other equations would require the use of exponents which would slow down the calculations. At the end of the day, games shouldn't lag.
 	}
 }
 
