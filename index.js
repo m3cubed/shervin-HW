@@ -15,4 +15,5 @@ function drawCanvases() {
 
 	window.requestAnimationFrame(drawCanvases);
 }
-window.requestAnimationFrame(drawCanvases);
+
+drawCanvases();

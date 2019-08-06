@@ -140,6 +140,9 @@ function drawCanvas() {
 	onRectText(); //This is just to help you. You don't need this in your work.
 
 	calcBallMove();
+
+	// window.requestAnimationFrame(drawCanvas); //Paints the draw function every frame.
 }
+// window.requestAnimationFrame(drawCanvas); //Paints the draw function every frame.
 
 export default drawCanvas;

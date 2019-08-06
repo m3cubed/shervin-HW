@@ -54,6 +54,9 @@ function drawCanvas() {
 	drawBall();
 
 	calcBallMove();
+
+	// window.requestAnimationFrame(drawCanvas); //Paints the draw function every frame.
 }
+// window.requestAnimationFrame(drawCanvas); //Paints the draw function every frame.
 
 export default drawCanvas;
