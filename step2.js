@@ -31,13 +31,13 @@ function handleKeyUp(event) {
 function calcBallMove() {
 	if (ballMove === "left") {
 		if (ballX - ballDX < ballRadius) {
-			ballX = ballRadius;
+			ballX = ballRadius; //Prevents the ball from going past the boarder. Since ball is drawn from the center, we need to compensate by adding the ball radius to x at 0.
 		} else {
 			ballX -= ballDX;
 		}
 	} else if (ballMove === "right") {
 		if (ballX + ballDX > canvas.width - ballRadius) {
-			ballX = canvas.width - ballRadius;
+			ballX = canvas.width - ballRadius; //Prevents the ball from going past the boarder. Since the ball is drawn from the center, we need to compensate by subtracting the ball from the full width of the canvas.
 		} else {
 			ballX += ballDX;
 		}
