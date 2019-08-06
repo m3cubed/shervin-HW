@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Shervin's HW</title>
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding-bottom: 100px;
+			}
+			canvas {
+				border: 1px solid black;
+			}
+			div {
+				margin-bottom: 40px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			p {
+				width: 600px;
+				max-width: 600px;
+				text-align: left;
+			}
+
+			.hidden {
+				display: none;
+			}
+
+			hr {
+				margin-top: 30px;
+				width: 600px;
+			}
+			.link {
+				margin-top: 5px;
+				margin-bottom: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Shervin's HW with Exemplars</h1>
+		<div>
+			<h3>Instructions:</h3>
+			<p>
+				All canvas' below are at a <strong>width of 400</strong> and a
+				<strong>height of 300.</strong>
+			</p>
+			<p>
+				The ball has a <strong>radius of 10</strong>, and a
+				<strong>movement speed of 3 px</strong>. Color is up to you.
+			</p>
+		</div>
+
+		<div>
+			<h4>STEP 1</h4>
+			<p>
+				<strong>Instructions: </strong> Make a ball that moves left or right.
+				The movement of the ball is controlled by the "a" and "d" key. The ball
+				is 200 px off the bottom of the screen and is centered horizontally.
+			</p>
+			<canvas id="step1" width="400" height="300"></canvas>
+			<hr />
+		</div>
+
+		<div>
+			<h4>STEP 2</h4>
+			<p>
+				<strong>Instructions: </strong> Implement a collison detection for the
+				borders so the ball cannot leave the screen.
+			</p>
+			<div>
+				<button id="2" onclick="handleHintButton(event.target.id)">
+					See Hint
+				</button>
+			</div>
+
+			<div class="hint hidden" id="hint2">
+				<p>
+					<strong>Hint: </strong>Make sure you think about the default (x, y)
+					when drawing a circle
+				</p>
+			</div>
+			<canvas id="step2" width="400" height="300"></canvas>
+			<hr />
+		</div>
+
+		<div>
+			<h4>STEP 3</h4>
+			<p>
+				<strong>Instructions: </strong> Add a rectangle at the bottom, center of
+				the screen. The rectangle should have a
+				<strong>width of 200</strong> and a <strong>height of 200</strong>.
+			</p>
+			<canvas id="step3" width="400" height="300"></canvas>
+			<hr />
+		</div>
+
+		<div>
+			<h4>STEP 4</h4>
+			<p>
+				<strong>Instructions: </strong>As you might have guessed, now make the
+				ball fall off the rectangle if it reaches the edge of the rectangle. The
+				'gravity' should be a constant that is set to <strong> -5 px</strong>.
+			</p>
+			<div>
+				<button id="4" onclick="handleHintButton(event.target.id)">
+					See Hint
+				</button>
+			</div>
+			<div class="hint hidden" id="hint4">
+				<p>
+					<strong>Hint: </strong>Make sure you fully utilize the
+					<strong>x-coordinates</strong> and the
+					<strong>width of the rectangle</strong> in your 'game logic'. Those
+					numbers should definitely be variables (const).
+				</p>
+				<p>
+					It would also help if you had a variable that checks whether or not
+					the ball is currently on the rectangle.
+				</p>
+			</div>
+			<canvas id="step4" width="400" height="300"></canvas>
+			<hr />
+		</div>
+
+		<div>
+			<h4>STEP 5</h4>
+			<p>
+				Hmmmmmm.... Seems like our canvas is a bit too small. Let's increase the
+				width. Since we've been working with just variables the whole time,
+				everything should still work properly even if you change one basic
+				property like width.
+			</p>
+			<p>
+				While we're at it, let's make it so the player can't move the ball
+				horizontally once the ball is off the rectangle.
+			</p>
+			<p>
+				<strong>Instructions: </strong> Change the width of the canvas to 1900
+				px. Implement a way to stop the player from moving the ball after it's
+				start to fall.
+			</p>
+			<div>
+				<button id="5" onclick="handleHintButton(event.target.id)">
+					See Hint
+				</button>
+			</div>
+			<div class="hint hidden" id="hint5">
+				<p>
+					<strong>Hint: </strong>Maybe only run the calculate ball x function
+					when the ball is <strong>actually ON THE TABLE</strong>! This way the
+					computer won't calculate keypress events once the ball is off the
+					rectangle.
+				</p>
+				<p>
+					You then might need a function that checks which direction the ball is
+					falling towards.
+				</p>
+			</div>
+			<canvas id="step5" width="1900" height="300"></canvas>
+			<hr />
+		</div>
+
+		<div>
+			<h4>STEP 6</h4>
+			<p>This last step is a <strong>CHALLENGE!</strong></p>
+			<p>
+				Attempt it if you are willing!
+			</p>
+			<p>
+				<strong>Instructions: </strong> Change the height of the canvas to 900
+				px. Implement realistic falling physics to the game. You will need to
+				refresh your grade 11 physics knowledge!
+			</p>
+			<p>
+				<strong
+					>You will also need to use the javascript function "setInterval()" and
+					also "clearInterval()".</strong
+				>
+			</p>
+			<a
+				class="link"
+				href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_clearinterval"
+				>W3School Demo</a
+			>
+			<div>
+				<button id="6" onclick="handleHintButton(event.target.id)">
+					See Hint
+				</button>
+			</div>
+			<div class="hint hidden" id="hint6">
+				<p>
+					<strong>Hint: </strong>What is the math behind a falling ball? What
+					type of variable will you need?
+				</p>
+			</div>
+			<canvas id="step6" width="1900" height="900"></canvas>
+			<hr />
+		</div>
+
+		<script type="text/javascript" src="./button.js"></script>
+		<script type="module" src="./index.js"></script>
+		<script type="module" src="./step1.js"></script>
+		<script type="module" src="./step2.js"></script>
+		<script type="module" src="./step3.js"></script>
+		<script type="module" src="./step4.js"></script>
+		<script type="module" src="./step5.js"></script>
+	</body>
+</html>
