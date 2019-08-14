@@ -1,0 +1,28 @@
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	height: 40px;
+	width: 100%;
+	background-color: #e6e6e6;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.navbar-link {
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	text-decoration: none;
+	width: 100px;
+	height: 100%;
+	border: 2px solid white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.margin {
+	height: 60px;
+}

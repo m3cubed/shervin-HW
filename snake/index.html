@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+	<style>
+		.main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		canvas {
+			border: 1px solid black;
+		}
+		button {
+			margin-left: 50px;
+			margin-right: 50px;
+			font-size: 20px;
+			width: 100px;
+		}
+		#prev {
+			visibility: hidden;
+			pointer-events: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<button id="prev">
+			<div>
+				<
+			</div>
+			Previous Lesson
+		</button>
+
+		<canvas id="screen" width="800" height="600"></canvas>
+
+		<a href="/page2.html">
+			<button id="next">
+				<div>></div>
+				Next Lesson
+			</button>
+		</a>
+	</div>
+	<script type="module" src="./scenario1.js"></script>
+</body>

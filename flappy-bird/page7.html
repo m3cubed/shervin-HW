@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		.description {
+			margin-top: 30px;
+		}
+		.main {
+			display: flex;
+			font-family: Arial, Helvetica, sans-serif;
+			justify-content: center;
+			align-items: center;
+		}
+		canvas {
+			border: 1px solid black;
+		}
+		button {
+			margin-left: 50px;
+			margin-right: 50px;
+			font-size: 20px;
+			width: 100px;
+		}
+		#next {
+			visibility: hidden;
+			pointer-events: none;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../navbar.css" />
+</head>
+<body>
+	<header>
+		<div class="navbar">
+			<a class="navbar-link" href="/index.html">Table fall</a>
+			<a class="navbar-link" href="/flappy-bird/index.html">Flappy Bird</a>
+		</div>
+	</header>
+	<div class="margin"></div>
+	<div class="main">
+		<a href="./page6.html">
+			<button id="prev">
+				<div>
+					<
+				</div>
+				Previous Lesson
+			</button>
+		</a>
+
+		<canvas id="screen" width="800" height="600"></canvas>
+
+		<button id="next">
+			<div>></div>
+			Next Lesson
+		</button>
+	</div>
+	<div class="description">
+		<strong>Instructions:</strong>
+		<ul>
+			<li>Add a game logic to count the score</li>
+		</ul>
+	</div>
+	<script type="module" src="./scenario7/main.js"></script>
+</body>

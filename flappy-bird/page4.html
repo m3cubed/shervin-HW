@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		.description {
+			margin-top: 30px;
+		}
+		.main {
+			display: flex;
+			font-family: Arial, Helvetica, sans-serif;
+			justify-content: center;
+			align-items: center;
+		}
+		canvas {
+			border: 1px solid black;
+		}
+		button {
+			margin-left: 50px;
+			margin-right: 50px;
+			font-size: 20px;
+			width: 100px;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../navbar.css" />
+</head>
+<body>
+	<header>
+		<div class="navbar">
+			<a class="navbar-link" href="/index.html">Table fall</a>
+			<a class="navbar-link" href="/flappy-bird/index.html">Flappy Bird</a>
+		</div>
+	</header>
+	<div class="margin"></div>
+	<div class="main">
+		<a href="./page3.html">
+			<button id="prev">
+				<div>
+					<
+				</div>
+				Previous Lesson
+			</button>
+		</a>
+
+		<canvas id="screen" width="800" height="600"></canvas>
+
+		<a href="./page5.html">
+			<button id="next">
+				<div>></div>
+				Next Lesson
+			</button>
+		</a>
+	</div>
+	<div class="description">
+		<strong>Instructions:</strong>
+		<ul>
+			<li>Draw a pipe that floats pass the screen</li>
+			<li>
+				Since there will be many pipes later on, it's much easier to move all
+				the pipes than to move the bird and the screen.
+			</li>
+			<li>
+				The pipe should have a width of 75px and velocity of 3px. The x position
+				and height of the pipe here is arbitary since they will be randomly
+				generated later on.
+			</li>
+		</ul>
+	</div>
+	<script type="module" src="./scenario4/main.js"></script>
+</body>

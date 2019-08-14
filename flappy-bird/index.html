@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		.description {
+			margin-top: 30px;
+		}
+		.main {
+			display: flex;
+			font-family: Arial, Helvetica, sans-serif;
+			justify-content: center;
+			align-items: center;
+		}
+		canvas {
+			border: 1px solid black;
+		}
+		button {
+			margin-left: 50px;
+			margin-right: 50px;
+			font-size: 20px;
+			width: 100px;
+		}
+		#prev {
+			visibility: hidden;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../navbar.css" />
+</head>
+<body>
+	<header>
+		<div class="navbar">
+			<a class="navbar-link" href="/index.html">Table fall</a>
+			<a class="navbar-link" href="/flappy-bird/index.html">Flappy Bird</a>
+		</div>
+	</header>
+	<div class="margin"></div>
+	<div class="main">
+		<button id="prev">
+			<div>
+				<
+			</div>
+			Previous Lesson
+		</button>
+
+		<canvas id="screen" width="800" height="600"></canvas>
+
+		<a href="./page2.html">
+			<button id="next">
+				<div>></div>
+				Next Lesson
+			</button>
+		</a>
+	</div>
+	<div class="description">
+		<strong>Instructions:</strong>
+		<ul>
+			<li>Make a canvas of of 800 width by 600 height</li>
+			<li>
+				Draw an orange box with a width of 50px and a height of 30px. It should
+				be 175px from the left of the screen and centered vertically.
+			</li>
+		</ul>
+	</div>
+	<script type="module" src="./scenario1/main.js"></script>
+</body>
