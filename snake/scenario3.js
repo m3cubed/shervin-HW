@@ -2,6 +2,8 @@ const canvas = document.getElementById("screen");
 const ctx = canvas.getContext("2d");
 
 const gridSize = 25;
+const frameRate = 1000 / 30; //1000ms/30 = 30fps. Since snake is an old game and we want the snake to slow down, the easiest way is to use a slower framerate.
+let timeStamp = window.performance.now(); //This is the current time that has elapsed since the site started in milliseconds. We're going to use this to control our fps.
 
 //We're seperating the dimensions with the position because there's going to be multiple sections
 const snakeSection = {
@@ -116,11 +118,30 @@ function moveSnake() {
 
 window.addEventListener("keydown", handleKeyDown);
 
+function gameEngine() {
+	const update = window.requestAnimationFrame(draw); //We have moved this from the draw function to here. This is currently going to ask the browser to draw the new image. Below we are going to check if we should do that.
+	let timeNow = window.performance.now(); //The current time.
+	let accumulatedTime = timeNow - timeStamp; //How much time has passed since the previous frame.
+
+	if (accumulatedTime < frameRate) {
+		//If the allotted time for 30fps has not passed yet.
+		window.cancelAnimationFrame(update);
+		while (accumulatedTime < frameRate) {
+			//This is called a while function. It will keep running until the conditions are met. In this case, if the time fits 30fps.
+			timeNow = window.performance.now();
+			accumulatedTime = timeNow - timeStamp;
+		}
+		window.requestAnimationFrame(draw);
+	}
+	timeStamp = timeNow;
+}
+
 function draw() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	drawGrid();
 	drawSnake();
-	window.requestAnimationFrame(draw);
+
+	gameEngine();
 }
 
 draw();
