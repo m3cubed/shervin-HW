@@ -125,10 +125,10 @@ function moveSnake() {
 function growSnake() {
 	if (snakeBody.length === 0) {
 		//If the snake currently has no body
-		snakeBody.push({ x: snake.x + gridSize, y: snake.y + gridSize }); //Add a section to the tail
+		snakeBody.push({ x: snake.x, y: snake.y }); //Add a section to the tail
 	} else {
 		const tail = snakeBody[snakeBody.length - 1];
-		snakeBody.push({ x: tail.x + gridSize, y: tail.y + gridSize }); //Add a section to the tail
+		snakeBody.push({ x: tail.x, y: tail.y }); //Add a section to the tail
 	}
 }
 
